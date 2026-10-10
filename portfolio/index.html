@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HIRWA Aime JOSPIN — Full-Stack Developer</title>
+    <meta
+      name="description"
+      content="HIRWA Aime JOSPIN (MC HAJ) is a Full-Stack Developer based in Rusizi, Rwanda, building creative software products. Open to jobs, internships, freelance work and collaborations."
+    />
+    <meta name="author" content="HIRWA Aime JOSPIN" />
+    <meta name="theme-color" content="#0A0C10" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#F7F8FA" media="(prefers-color-scheme: light)" />
+    <link rel="canonical" href="https://your-project.vercel.app/" />
+
+    <!-- Open Graph / Twitter (SPA defaults — per-route tags are injected client-side) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="HIRWA Aime JOSPIN — Portfolio" />
+    <meta property="og:title" content="HIRWA Aime JOSPIN — Full-Stack Developer" />
+    <meta
+      property="og:description"
+      content="Full-Stack Developer building creative software products. Rusizi, Rwanda."
+    />
+    <meta property="og:url" content="https://your-project.vercel.app/" />
+    <meta property="og:image" content="https://your-project.vercel.app/og-image.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="HIRWA Aime JOSPIN — Full-Stack Developer" />
+    <meta
+      name="twitter:description"
+      content="Full-Stack Developer building creative software products. Rusizi, Rwanda."
+    />
+    <meta name="twitter:image" content="https://your-project.vercel.app/og-image.png" />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Prevent flash of wrong theme: runs before first paint -->
+    <script>
+      (function () {
+        try {
+          var stored = null;
+          try {
+            stored = localStorage.getItem('theme');
+          } catch (e) {
+            stored = null;
+          }
+          var dark =
+            stored === 'dark' ||
+            (!stored && !window.matchMedia('(prefers-color-scheme: light)').matches);
+          if (dark) {
+            document.documentElement.classList.add('dark');
+          }
+        } catch (e) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
