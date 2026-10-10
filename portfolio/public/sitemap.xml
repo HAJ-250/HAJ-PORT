@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://your-project.vercel.app/</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://your-project.vercel.app/blog</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://your-project.vercel.app/projects/kaboss-image</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
+    <loc>https://your-project.vercel.app/projects/umudugudu-management-system</loc>
+    <changefreq>monthly</changefreq>
+  </url>
+</urlset>
