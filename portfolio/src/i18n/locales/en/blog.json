@@ -1,0 +1,17 @@
+{
+  "index": {
+    "title": "Blog",
+    "lead": "Notes on how I build software and this site.",
+    "empty": "No posts published yet — check back soon.",
+    "readMore": "Read post"
+  },
+  "post": {
+    "back": "Back to blog",
+    "tags": "Tags",
+    "on": "on",
+    "by": "by",
+    "draftNotice": "This post is a draft and is not publicly listed yet.",
+    "availableIn": "This post is available in English.",
+    "notFound": "Post not found"
+  }
+}

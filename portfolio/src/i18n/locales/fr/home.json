@@ -1,0 +1,91 @@
+{
+  "hero": {
+    "label": "Bonjour — je suis",
+    "name": "HIRWA Aime JOSPIN",
+    "aka": "alias MC HAJ",
+    "role": "Développeur full-stack",
+    "positioning": "Je crée des produits logiciels inventifs — des idées au code fonctionnel.",
+    "note": "Ouvert aux emplois, stages, projets freelance et collaborations.",
+    "terminalTitle": "haj.ts",
+    "scrollHint": "Faites défiler",
+    "avatarAlt": "Avatar monogramme de HIRWA Aime JOSPIN"
+  },
+  "about": {
+    "title": "À propos",
+    "lead": "Je suis HIRWA Aime JOSPIN — aussi connu sous le nom de MC HAJ — développeur full-stack basé à Rusizi, au Rwanda.",
+    "points": [
+      "J'aime résoudre des problèmes, faire preuve de créativité et d'innovation, et je m'attache à livrer des logiciels dont je suis fier.",
+      "Mon objectif : créer de nombreux produits logiciels inventifs, continuer à élargir mes compétences et progresser en informatique et multimédia.",
+      "Je suis aussi à l'aise en travail autonome qu'en équipe.",
+      "Je recherche un emploi ou un stage, des clients freelance et des collaborateurs soucieux de la qualité."
+    ],
+    "locationLabel": "Basé à",
+    "strengthsLabel": "Atouts",
+    "strengths": ["Résolution de problèmes", "Créativité", "Innovation"],
+    "workStyleLabel": "Mode de travail",
+    "workStyle": ["En autonomie", "En équipe"]
+  },
+  "skills": {
+    "title": "Compétences et outils",
+    "lead": "Les technologies et outils que j'utilise, regroupés par usage — sans niveaux auto-notés, juste des groupements honnêtes.",
+    "groups": {
+      "frontend": "Front-end",
+      "languages": "Langages",
+      "tools": "Outils",
+      "projectStack": "Utilisés dans mes projets",
+      "learning": "En apprentissage"
+    },
+    "learningItems": ["La programmation en général", "Le multimédia"]
+  },
+  "projects": {
+    "title": "Projets en vedette",
+    "lead": "Deux projets dont je suis fier : un site client en ligne et un prototype fonctionnel — tous deux réalisés avec le même soin."
+  },
+  "github": {
+    "title": "Sur GitHub",
+    "lead": "Deux dépôts choisis à la main, plus d'autres récupérés en direct depuis mon profil public.",
+    "handpicked": "Sélection",
+    "more": "Plus sur GitHub",
+    "loading": "Chargement des dépôts…",
+    "error": "Impossible de charger les dépôts pour le moment. Vous pouvez consulter mon profil directement.",
+    "empty": "Aucun autre dépôt public à afficher.",
+    "stars": "étoiles",
+    "handpickedNotes": {
+      "KABOSSInc": "Le code source du site client de KABOSS Inc.",
+      "umudugudu-system": "Le prototype du système de gestion des informations des citoyens."
+    }
+  },
+  "journey": {
+    "title": "Parcours",
+    "lead": "Ma formation et mes certificats à ce jour. Les dates ne sont pas affichées car aucune n'a été confirmée.",
+    "education": "Formation",
+    "certificates": "Certificats",
+    "practice": "Pratique continue",
+    "practiceNote": "Je travaille régulièrement des défis de programmation pour affiner ma résolution de problèmes.",
+    "levels": {
+      "primary": "Primaire",
+      "olevel": "Secondaire (O-Level)",
+      "upper": "Niveau supérieur"
+    },
+    "cert1": "Certificat en programmation et administration système",
+    "cert2": "Certificat en machine learning"
+  },
+  "stats": {
+    "title": "En chiffres",
+    "lead": "Des comptes tirés directement du contenu de ce site — rien de plus.",
+    "featuredProjects": "Projets en vedette",
+    "certificates": "Certificats",
+    "siteLanguages": "Langues du site",
+    "programmingLanguages": "Langages de programmation"
+  },
+  "testimonials": {
+    "title": "Ce qu'ils disent",
+    "lead": "Des mots gentils de clients et collaborateurs."
+  },
+  "blog": {
+    "title": "Du blog",
+    "lead": "Des notes sur mes méthodes de travail.",
+    "readMore": "Lire l'article",
+    "empty": "Aucun article publié pour le moment — revenez bientôt."
+  }
+}

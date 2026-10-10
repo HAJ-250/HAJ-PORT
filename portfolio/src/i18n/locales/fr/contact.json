@@ -1,0 +1,31 @@
+{
+  "title": "Contactez-moi",
+  "lead": "Emploi, stage, projet freelance ou collaboration — envoyez-moi un message et je vous répondrai dès que possible.",
+  "nameLabel": "Votre nom",
+  "emailLabel": "Adresse e-mail",
+  "subjectLabel": "Objet (facultatif)",
+  "messageLabel": "Message",
+  "namePlaceholder": "Votre nom complet",
+  "emailPlaceholder": "vous@exemple.com",
+  "subjectPlaceholder": "De quoi s'agit-il ?",
+  "messagePlaceholder": "Parlez-moi un peu de votre projet ou de votre opportunité…",
+  "submit": "Envoyer le message",
+  "sending": "Envoi…",
+  "successTitle": "Message envoyé",
+  "successText": "Merci de m'avoir contacté — je répondrai dès que possible.",
+  "errorTitle": "Une erreur est survenue",
+  "errorText": "Votre message n'a pas pu être envoyé. Réessayez ou contactez-moi directement via les liens ci-dessous.",
+  "fallbackTitle": "Le formulaire automatique n'est pas encore disponible sur ce déploiement",
+  "fallbackText": "L'envoi d'e-mails n'est pas configuré ici. Vous pouvez toujours me contacter directement :",
+  "directLabel": "Me contacter directement",
+  "errors": {
+    "name": "Veuillez saisir votre nom (2 à 100 caractères).",
+    "email": "Veuillez saisir une adresse e-mail valide.",
+    "subject": "Veuillez garder l'objet sous 200 caractères.",
+    "message": "Veuillez rédiger un message (10 à 5000 caractères).",
+    "network": "Une erreur réseau s'est produite. Vérifiez votre connexion puis réessayez.",
+    "not_configured": "L'envoi d'e-mails n'est pas encore configuré sur ce site — utilisez les liens directs ci-dessous.",
+    "rate_limited": "Trop de messages depuis cette connexion. Veuillez patienter quelques minutes puis réessayer.",
+    "unexpected": "Une erreur inattendue s'est produite. Réessayez ou contactez-moi directement."
+  }
+}

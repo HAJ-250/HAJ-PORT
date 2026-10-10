@@ -1,0 +1,70 @@
+{
+  "skipToContent": "Skip to content",
+  "nav": {
+    "main": "Main navigation",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "journey": "Journey",
+    "contact": "Contact",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "theme": {
+    "toggle": "Toggle color theme",
+    "light": "Light",
+    "dark": "Dark"
+  },
+  "language": {
+    "label": "Language"
+  },
+  "buttons": {
+    "viewProjects": "View projects",
+    "contactMe": "Contact me",
+    "downloadCv": "Download CV",
+    "cvComingSoon": "CV coming soon",
+    "caseStudy": "Case study",
+    "liveSite": "Live site",
+    "backToHome": "Back to home",
+    "backToProjects": "Back to projects",
+    "nextProject": "Next project",
+    "previousProject": "Previous project",
+    "sendMessage": "Send message",
+    "sending": "Sending…",
+    "retry": "Try again",
+    "sendByEmail": "Send by email",
+    "whatsappUs": "Message on WhatsApp",
+    "readPost": "Read post",
+    "viewAllPosts": "View all posts",
+    "openProfile": "Open GitHub profile"
+  },
+  "status": {
+    "live": "Live",
+    "prototype": "Prototype"
+  },
+  "footer": {
+    "tagline": "Full-Stack Developer building creative software products.",
+    "rights": "All rights reserved.",
+    "sections": "Sections",
+    "connect": "Connect",
+    "contact": "Contact"
+  },
+  "a11y": {
+    "newTab": "(opens in a new tab)"
+  },
+  "meta": {
+    "tagline": "Full-Stack Developer building creative software products.",
+    "titleSuffix": "Full-Stack Developer"
+  },
+  "cv": {
+    "title": "Curriculum vitae",
+    "description": "A one-page summary of my background, skills and projects.",
+    "download": "Download CV",
+    "comingSoon": "CV coming soon"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "lead": "Sorry — this page doesn't exist or has moved.",
+    "home": "Back to home"
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "skipToContent": "Aller au contenu",
+  "nav": {
+    "main": "Navigation principale",
+    "about": "À propos",
+    "skills": "Compétences",
+    "projects": "Projets",
+    "journey": "Parcours",
+    "contact": "Contact",
+    "openMenu": "Ouvrir le menu",
+    "closeMenu": "Fermer le menu"
+  },
+  "theme": {
+    "toggle": "Changer de thème",
+    "light": "Clair",
+    "dark": "Sombre"
+  },
+  "language": {
+    "label": "Langue"
+  },
+  "buttons": {
+    "viewProjects": "Voir les projets",
+    "contactMe": "Me contacter",
+    "downloadCv": "Télécharger le CV",
+    "cvComingSoon": "CV bientôt disponible",
+    "caseStudy": "Étude de cas",
+    "liveSite": "Site en ligne",
+    "backToHome": "Retour à l'accueil",
+    "backToProjects": "Retour aux projets",
+    "nextProject": "Projet suivant",
+    "previousProject": "Projet précédent",
+    "sendMessage": "Envoyer le message",
+    "sending": "Envoi…",
+    "retry": "Réessayer",
+    "sendByEmail": "Envoyer par e-mail",
+    "whatsappUs": "Me contacter sur WhatsApp",
+    "readPost": "Lire l'article",
+    "viewAllPosts": "Voir tous les articles",
+    "openProfile": "Ouvrir le profil GitHub"
+  },
+  "status": {
+    "live": "En ligne",
+    "prototype": "Prototype"
+  },
+  "footer": {
+    "tagline": "Développeur full-stack, créateur de logiciels inventifs.",
+    "rights": "Tous droits réservés.",
+    "sections": "Sections",
+    "connect": "Me suivre",
+    "contact": "Contact"
+  },
+  "a11y": {
+    "newTab": "(s'ouvre dans un nouvel onglet)"
+  },
+  "meta": {
+    "tagline": "Développeur full-stack créant des produits logiciels créatifs.",
+    "titleSuffix": "Développeur full-stack"
+  },
+  "cv": {
+    "title": "Curriculum vitae",
+    "description": "Un résumé d'une page de mon parcours, de mes compétences et de mes projets.",
+    "download": "Télécharger le CV",
+    "comingSoon": "CV bientôt disponible"
+  },
+  "notFound": {
+    "title": "Page introuvable",
+    "lead": "Désolé — cette page n'existe pas ou a été déplacée.",
+    "home": "Retour à l'accueil"
+  }
+}

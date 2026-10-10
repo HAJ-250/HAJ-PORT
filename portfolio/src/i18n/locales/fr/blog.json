@@ -1,0 +1,17 @@
+{
+  "index": {
+    "title": "Blog",
+    "lead": "Des notes sur la façon dont je construis des logiciels et ce site.",
+    "empty": "Aucun article publié pour le moment — revenez bientôt.",
+    "readMore": "Lire l'article"
+  },
+  "post": {
+    "back": "Retour au blog",
+    "tags": "Tags",
+    "on": "le",
+    "by": "par",
+    "draftNotice": "Cet article est un brouillon et n'est pas encore listé publiquement.",
+    "availableIn": "Cet article est disponible en anglais.",
+    "notFound": "Article introuvable"
+  }
+}

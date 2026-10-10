@@ -1,0 +1,48 @@
+{
+  "labels": {
+    "overview": "Aperçu",
+    "problem": "Problème résolu",
+    "techStack": "Technologies",
+    "myRole": "Mon rôle",
+    "whatIBuilt": "Ce que j'ai construit",
+    "whatILearned": "Ce que j'ai appris",
+    "links": "Liens",
+    "screenshots": "Captures d'écran",
+    "screenshotsNote": "Les captures d'écran seront ajoutées par le propriétaire.",
+    "demoDataNote": "Note de confidentialité : les captures d'écran ajoutées ultérieurement montreront uniquement des données de démonstration fictives — aucune information réelle de résidents n'est affichée dans ce portfolio.",
+    "repoMissing": "Lien du dépôt à ajouter par le propriétaire."
+  },
+  "items": {
+    "kabossImage": {
+      "title": "KABOSS IMAGE",
+      "short": "Le site d'un centre d'affaires multi-services pour KABOSS Inc à Nyamasheke, au Rwanda — en ligne et fonctionnel.",
+      "overview": "KABOSS IMAGE est le site web de KABOSS Inc, un centre d'affaires multi-services à Nyamasheke, au Rwanda. Le site présente les services de l'entreprise — impression, design graphique, photographie, sonorisation et services numériques, y compris l'assistance Irembo — avec une galerie, des témoignages et des coordonnées complètes.",
+      "problem": "Une petite entreprise multi-services avait besoin d'une présence en ligne claire : un endroit où les clients peuvent voir tous les services, comprendre ce qui est proposé et trouver rapidement les coordonnées — car beaucoup de clients découvrent d'abord une entreprise en ligne.",
+      "role": "J'ai développé le site pour le client avec un mélange de travail original et de ressources existantes. Le site publié mentionne « Developed by HIRWA Aime Jospin » dans son pied de page.",
+      "built": [
+        "Une section d'accueil présentant KABOSS Inc comme un centre d'affaires multi-services, avec des liens vers les services et le contact",
+        "Six sections de services — impression, design graphique, photographie, sonorisation, services numériques et assistance Irembo — chacune listant ses sous-services",
+        "Une section « Why Choose KABOSS » couvrant la qualité professionnelle, la livraison dans les délais, des prix abordables et l'attention portée au client",
+        "Une section de témoignages avec trois avis de clients",
+        "Une galerie présentant les travaux réalisés",
+        "Une section d'appel à l'action, plus un pied de page avec des liens rapides, la liste des services, les coordonnées, les heures d'ouverture et un widget de chat WhatsApp"
+      ],
+      "learned": "Maintenir un site client en ligne clair, rapide et facile à mettre à jour — et décrire chaque service de façon à répondre aux questions des clients avant qu'ils ne les posent.",
+      "screenshotsNote": "Des captures du site en ligne peuvent être ajoutées par le propriétaire (voir docs/CONTENT-TODO.md)."
+    },
+    "umudugudu": {
+      "title": "Système de gestion Umudugudu",
+      "short": "Un prototype fonctionnel pour gérer les informations des citoyens au niveau du village (umudugudu).",
+      "overview": "Le système de gestion Umudugudu est un prototype fonctionnel d'un outil de gestion des informations des citoyens au niveau de l'umudugudu — la plus petite unité administrative locale, un village, au Rwanda.",
+      "problem": "Les administrateurs locaux tiennent souvent les informations des citoyens sur papier ou dans des fichiers épars. Un système numérique simple pourrait aider à garder les registres cohérents, complets et plus faciles à consulter.",
+      "role": "J'ai construit ce prototype en PHP et HTML.",
+      "built": [
+        "Un prototype fonctionnel du système de gestion des informations des citoyens, construit en PHP et HTML",
+        "Le propriétaire le décrit comme ayant de nombreuses fonctionnalités — la liste complète est encore en cours de documentation (voir docs/CONTENT-TODO.md)"
+      ],
+      "learned": "Concevoir un outil de saisie autour d'un flux de travail administratif réel — et la vigilance en matière de confidentialité que les informations des citoyens exigent.",
+      "demoDataNote": "Note de confidentialité : les captures d'écran ajoutées ultérieurement montreront uniquement des données de démonstration fictives. Aucune information réelle de résidents n'est affichée dans ce portfolio.",
+      "screenshotsNote": "Captures avec données fictives à ajouter par le propriétaire (voir docs/CONTENT-TODO.md)."
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "labels": {
+    "overview": "Incamake",
+    "problem": "Ikibazo gikemurwa",
+    "techStack": "Ikoranabuhanga",
+    "myRole": "Uruhare rwanjye",
+    "whatIBuilt": "Icyo nkubaka",
+    "whatILearned": "Ibyo byigeje",
+    "links": "Amashakira",
+    "screenshots": "Ibishushanyo",
+    "screenshotsNote": "Ibishushanyo bizashyizwe na we nyuma.",
+    "demoDataNote": "Ikibazo cy'umwete: ibishushanyo bizashyizwe bizerekana date ya kabuhariwe gusa — amakuru y'abaturage ntarekwa kuri uru portfolio.",
+    "repoMissing": "Amashakira ya repo azashyizwe na we."
+  },
+  "items": {
+    "kabossImage": {
+      "title": "KABOSS IMAGE",
+      "short": "Site y'ikigo cy'ibikorwa byinshi kuri KABOSS Inc i Nyamasheke, mu Rwanda — uri kuri murongo ikora.",
+      "overview": "KABOSS IMAGE ni site ya KABOSS Inc, ikigo cy'ibikorwa byinshi i Nyamasheke, mu Rwanda. Site yerekana ibikorwa by'ikigo — printing, graphic design, photography, sound system n'ibikorwa bya digitali, harimo n'ukoresha Irembo — n'ibirori, amateka y'abakiriya n'amakuru yose y'ubuvandimwe.",
+      "problem": "Ikigo kito cy'ibikorwa byinshi cyahungabana kugira ngo cyemeze kuri murongo: abakiriya bashobora kubona ibikorwa byose, kubona ibyo gikora, no kubona amakuru y'ubuvandimwe vuba — kuko abakiriya benshi babona ikigo kuri murongo mbere.",
+      "role": "Nkora site kuri umukiriya, nkora igice ryanjye nkora n'ibindi bikorwa. Site iri kuri murongo ivuga \"Developed by HIRWA Aime Jospin\" mu musaruro.",
+      "built": [
+        "Igice hejuru cya KABOSS Inc, gikora ikigo cy'ibikorwa byinshi, hamwe n'amashakira ajya kuri ibikorwa n'ubuvandimwe",
+        "Ibice bitandatu by'ibikorwa — Printing, Graphic Design, Photography, Sound System, Digital Services n'Irembo Assistance — byose bikwekweza ibikorwa byabo",
+        "Igice 'Why Choose KABOSS' cyerekeza ubuziranenge, gukoresha igihe, ibiciro byiza n'umwete w'abakiriya",
+        "Igice cy'amateka y'abakiriya hamwe n'amagambo atatu",
+        "Igice cy'ibishushanyo by'ibikorwa byakozwe",
+        "Igice cyo guhamagara n'umusaruro ukwekweza amashakira, urutonde rw'ibikorwa, amakuru y'ubuvandimwe, amasaha n'ibikoresho bya WhatsApp"
+      ],
+      "learned": "Kubungabunga site y'umukiriya kuri murongo, ikora vuba kandi ikora neza — no kuvugana ibikorwa byose mbere y'ibibazo by'abakiriya.",
+      "screenshotsNote": "Ibishushanyo bya site bizashyizwe na we (reba docs/CONTENT-TODO.md)."
+    },
+    "umudugudu": {
+      "title": "Umudugudu Management System",
+      "short": "Icyitegererezo gikora cyo kuyobora amakuru y'abaturage mu mudugudu (umudugudu).",
+      "overview": "Umudugudu Management System ni icyitegererezo gikora cyo kuyobora amakuru y'abaturage mu mudugudu — igice cy'ibanze cy'ubutegetsi mu Rwanda, nk'umudugudu (icyaro).",
+      "problem": "Abayobozi bo mu gice bakora amakuru y'abaturage ku papyire cyangwa mu dushya. Sisitemu ndende ya digitale ishobora gufasha kubungabunga amakuru neza no kuyisura vuba.",
+      "role": "Nkubaka icyitegererezo uri i PHP n'HTML.",
+      "built": [
+        "Icyitegererezo gikora cyo kuyobora amakuru y'abaturage, kikozwe mu PHP n'HTML",
+        "We nyuma uyavuga ko ifite ibikorwa byinshi — urutonde rw'ibikorwa ruzashyizwe (reba docs/CONTENT-TODO.md)"
+      ],
+      "learned": "Guhindura uburyo bwo kwandika amakuru mu bikorwa by'ubutegetsi — n'umwete w'ibikorwa by'abaturage.",
+      "demoDataNote": "Ikibazo cy'umwete: ibishushanyo bizashyizwe bizerekana date ya kabuhariwe gusa. Amakuru y'abaturage ntarekwa kuri uru portfolio.",
+      "screenshotsNote": "Ibishushanyo hamwe n'ibyavuzwe bizashyizwe na we (reba docs/CONTENT-TODO.md)."
+    }
+  }
+}

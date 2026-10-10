@@ -1,0 +1,31 @@
+{
+  "title": "Unganire na none",
+  "lead": "Ushaka akazi, internship, umurimo wa freelance cyangwa kuba afatanyabikorwa — ongeramo ubutumwa, nzagarukira vuba.",
+  "nameLabel": "Izina ryawe",
+  "emailLabel": "Imeyili yawe",
+  "subjectLabel": "Icyo uvuga (idafitika)",
+  "messageLabel": "Ubutumwa",
+  "namePlaceholder": "Izina ryawe ryose",
+  "emailPlaceholder": "we@urugero.com",
+  "subjectPlaceholder": "Ni ikintu cyaha?",
+  "messagePlaceholder": "Nimba ubutumwa ku mirimo cyangwa umwanya wawe…",
+  "submit": "Ongera ubutumwa",
+  "sending": "Kohereza…",
+  "successTitle": "Ubutumwa bwaherewe",
+  "successText": "Urakoze kumbaganira — nzagarukira vuba.",
+  "errorTitle": "Habaye ikibazo",
+  "errorText": "Ubutumwa bwatabwo koherezwa. Ongera ugerageze cyangwa uvugane na none hano hasi.",
+  "fallbackTitle": "Umutekano wo kohereza ubutumwa ntuhari kuri uru site",
+  "fallbackText": "Kohereza imeyili ntiruhari kuri uru site. Ushobora uvugane na none hano:",
+  "directLabel": "Uvugane na none",
+  "errors": {
+    "name": "Yandika izina ryawe (inyuguti 2–100).",
+    "email": "Yandika imeyili nziza.",
+    "subject": "Yandika icyo uvuga hasi y'inyuguti 200.",
+    "message": "Yandika ubutumwa (inyuguti 10–5000).",
+    "network": "Habaye ikibazo cy'umuriro. Ongera ugerageze.",
+    "not_configured": "Kohereza imeyili ntiruhari kuri uru site — koresha amashakira hano hasi.",
+    "rate_limited": "Ubutumwa bwinshi bwaherewe. Tegereza iminota mike uze ukongere.",
+    "unexpected": "Habaye ikibazo kidasanzwe. Ongera ugerageze cyangwa uvugane na none."
+  }
+}

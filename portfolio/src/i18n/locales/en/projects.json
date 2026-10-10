@@ -1,0 +1,48 @@
+{
+  "labels": {
+    "overview": "Overview",
+    "problem": "Problem it addresses",
+    "techStack": "Tech stack",
+    "myRole": "My role",
+    "whatIBuilt": "What I built",
+    "whatILearned": "What I learned",
+    "links": "Links",
+    "screenshots": "Screenshots",
+    "screenshotsNote": "Screenshots will be added by the owner.",
+    "demoDataNote": "Privacy note: any screenshots added later will show fictional demo data only — no real residents' information is displayed anywhere in this portfolio.",
+    "repoMissing": "Repository link to be added by the owner."
+  },
+  "items": {
+    "kabossImage": {
+      "title": "KABOSS IMAGE",
+      "short": "A multi-service business center website for KABOSS Inc in Nyamasheke, Rwanda — live and working.",
+      "overview": "KABOSS IMAGE is the website for KABOSS Inc, a multi-service business center in Nyamasheke, Rwanda. The site presents the company's services — printing, graphic design, photography, sound system and digital services, including Irembo assistance — with a gallery, testimonials and full contact details.",
+      "problem": "A small multi-service business needed a clear online presence: one place where clients can see every service, understand what is offered, and find contact details quickly — because many customers meet a business online first.",
+      "role": "I developed the site for the client with a mix of original work and existing resources. The published site credits \"Developed by HIRWA Aime Jospin\" in its footer.",
+      "built": [
+        "A hero section introducing KABOSS Inc as a multi-service business center, with links to the services and contact sections",
+        "Six service sections — Printing, Graphic Design, Photography, Sound System, Digital Services and Irembo Assistance — each listing its sub-services",
+        "A \"Why Choose KABOSS\" section covering professional quality, timely delivery, affordable pricing and customer focus",
+        "A testimonials section with three client quotes",
+        "A gallery section showcasing completed work",
+        "A call-to-action section, plus a footer with quick links, the service list, contact details, opening hours and a WhatsApp chat widget"
+      ],
+      "learned": "Keeping a live client site clear, fast and easy to update — and describing each service in a way that answers the client's questions before they ask.",
+      "screenshotsNote": "Screenshots of the live site can be added by the owner (see docs/CONTENT-TODO.md)."
+    },
+    "umudugudu": {
+      "title": "Umudugudu Management System",
+      "short": "A functional prototype for managing citizen information at the village (umudugudu) level.",
+      "overview": "The Umudugudu Management System is a functional prototype of a tool for managing citizen information at the level of the umudugudu — the smallest local administrative unit, a village, in Rwanda.",
+      "problem": "Local administrators often track citizen information on paper or in scattered files. A simple digital system could help keep records consistent, complete and easier to look up.",
+      "role": "I built this prototype in PHP and HTML.",
+      "built": [
+        "A working prototype of the citizen-information management system, built with PHP and HTML",
+        "The owner describes it as having many features — the full feature list is still being documented (see docs/CONTENT-TODO.md)"
+      ],
+      "learned": "Designing a data-entry tool around a real administrative workflow — and the privacy care that citizen information demands.",
+      "demoDataNote": "Privacy note: any screenshots added later will show fictional demo data only. No real residents' information is displayed anywhere in this portfolio.",
+      "screenshotsNote": "Screenshots with fictional demo data to be added by the owner (see docs/CONTENT-TODO.md)."
+    }
+  }
+}

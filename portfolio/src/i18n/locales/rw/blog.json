@@ -1,0 +1,17 @@
+{
+  "index": {
+    "title": "Blog",
+    "lead": "Inyandiko ku buryo nkora ikoranabuhanga n'uru site.",
+    "empty": "Nta nyandiko yashyizwe hanza ubu — garuka vuba.",
+    "readMore": "Soma inyandiko"
+  },
+  "post": {
+    "back": "Garuka kuri blog",
+    "tags": "Tags",
+    "on": "ku",
+    "by": "na",
+    "draftNotice": "Iyi nyandiko ni draft kandi ntirashyizwe hanza.",
+    "availableIn": "Iyi nyandiko iri mu Cyongereza.",
+    "notFound": "Inyandiko ntibitezwe"
+  }
+}

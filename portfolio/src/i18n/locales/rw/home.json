@@ -1,0 +1,91 @@
+{
+  "hero": {
+    "label": "Muraho — ni",
+    "name": "HIRWA Aime JOSPIN",
+    "aka": "witwa MC HAJ",
+    "role": "Umushakashatsi wa Full-Stack",
+    "positioning": "Nkora inganda z'ikoranabuhanga zifite ubuhanga — kuva kuri ideya kugeza kuri code ikora.",
+    "note": "Nshaka akazi, internship, imirimo ya freelance n'abafatanyabikorwa.",
+    "terminalTitle": "haj.ts",
+    "scrollHint": "Simbuka hasi",
+    "avatarAlt": "Avatar ya monogram ya HIRWA Aime JOSPIN"
+  },
+  "about": {
+    "title": "Ku njye",
+    "lead": "Ni HIRWA Aime JOSPIN — nkitwa MC HAJ — Umushakashatsi wa Full-Stack ukomoka i Rusizi, mu Rwanda.",
+    "points": [
+      "Nshimangira gukemura ibibazo, ubuhanga n'ubushya — nkora ibicuruzwa by'ikoranabuhanga mfite izera kuri byo.",
+      "Intego yange ni ukora inganda nyinshi z'ikoranabuhanga, kwaguka mu bushobozi, no kumenya byinshi kuri ordinateur n'ibikoresho by'imediya.",
+      "Nshobora gukora samwe cyangwa mu itsinda.",
+      "Shakisha akazi cyangwa internship, abakiriya ba freelance, n'abafatanyabikorwa bafite izera ku buziranenge."
+    ],
+    "locationLabel": "Muri",
+    "strengthsLabel": "Amashobozi yange",
+    "strengths": ["Gukemura ibibazo", "Ubuhanga", "Ubushya"],
+    "workStyleLabel": "Imiterere y'umurimo",
+    "workStyle": ["Ku giti cyange", "Mu itsinda"]
+  },
+  "skills": {
+    "title": "Ubushobozi n'ibikoresho",
+    "lead": "Ikoranabuhanga n'ibikoresho nkoressa, byashyizwe mu bigice bitandukanye.",
+    "groups": {
+      "frontend": "Imbere",
+      "languages": "Ururimi",
+      "tools": "Ibikoresho",
+      "projectStack": "Byakoreshijwe mu mishinga yange",
+      "learning": "Ndacyiga"
+    },
+    "learningItems": ["Gutunganya programme mu buryo bwa rusange", "Imidiya nyinshi"]
+  },
+  "projects": {
+    "title": "Imishinga y'ibanze",
+    "lead": "Imishinga ibiri mfite izera: site y'umukiriya uri kuri murongo, n'icyitegererezo gikora — byombi byakozwe n'umwete w'umwe."
+  },
+  "github": {
+    "title": "Kuri GitHub",
+    "lead": "Ibikoresho bibiri byatoranyijwe, n'ibindi byavuye kuri profile yange ya GitHub.",
+    "handpicked": "Byatoranyijwe",
+    "more": "Ibindi kuri GitHub",
+    "loading": "Turimo gukura imishinga…",
+    "error": "Imishinga ntibyashoboye kukurwa ubu. Wakoresha profile yange ya GitHub.",
+    "empty": "Nta mishinga y'iyindi yawe kwerekana.",
+    "stars": "stars",
+    "handpickedNotes": {
+      "KABOSSInc": "Ibyo twakoze site y'umukiriya KABOSS Inc.",
+      "umudugudu-system": "Icyitegererezo cyo kuyobora amakuru y'abaturage."
+    }
+  },
+  "journey": {
+    "title": "Umugendo",
+    "lead": "Amashuri yange n'ibyemeza kugeza ubu. Itariki ntibyashyizwe kuko ntibyahariwe.",
+    "education": "Amashuri",
+    "certificates": "Ibyemeza",
+    "practice": "Nkora buri munsi",
+    "practiceNote": "Nkora buri munsi ibibazo byo gutunganya programme kugira ngo nkemure neza ibibazo.",
+    "levels": {
+      "primary": "Amashuri abanza",
+      "olevel": "Amashuri ya O-Level",
+      "upper": "Icyiciro cy'ikirenga"
+    },
+    "cert1": "Icyemeza cyo gutunganya programme no kuyobora sisitemu",
+    "cert2": "Icyemeza cyo gukoresha Machine Learning"
+  },
+  "stats": {
+    "title": "Mu mibare",
+    "lead": "Ibari biva ku nyandiko y'uru site gusa.",
+    "featuredProjects": "Imishinga y'ibanze",
+    "certificates": "Ibyemeza",
+    "siteLanguages": "Indimi z'uru site",
+    "programmingLanguages": "Indimi zo gutunganya programme"
+  },
+  "testimonials": {
+    "title": "Iby'abantu babivuga",
+    "lead": "Amagambo meza yakoresheje abakiriya n'abafatanyabikorwa."
+  },
+  "blog": {
+    "title": "Kuri blog",
+    "lead": "Inyandiko ku buryo nkora ibintu.",
+    "readMore": "Soma inyandiko",
+    "empty": "Nta nyandiko yashyizwe hanza ubu — garuka vuba."
+  }
+}

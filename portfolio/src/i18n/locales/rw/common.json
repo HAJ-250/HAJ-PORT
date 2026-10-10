@@ -1,0 +1,70 @@
+{
+  "skipToContent": "Yerekeza kuri inyandiko",
+  "nav": {
+    "main": "Umuhigo munini",
+    "about": "Ku njye",
+    "skills": "Ubushobozi",
+    "projects": "Imishinga",
+    "journey": "Umugendo",
+    "contact": "Kuvugana",
+    "openMenu": "Fungura umuhigo",
+    "closeMenu": "Funga umuhigo"
+  },
+  "theme": {
+    "toggle": "Hindura imiterere",
+    "light": "Umunye",
+    "dark": "Umwijima"
+  },
+  "language": {
+    "label": "Ururimi"
+  },
+  "buttons": {
+    "viewProjects": "Reba imishinga",
+    "contactMe": "Ongeramo ubutumwa",
+    "downloadCv": "Kuraho CV",
+    "cvComingSoon": "CV bizaha vuba",
+    "caseStudy": "Inyigo y'umushinga",
+    "liveSite": "Site kuri murongo",
+    "backToHome": "Garuka ku ntangiriro",
+    "backToProjects": "Garuka kuri mishinga",
+    "nextProject": "Umushinga ukurikira",
+    "previousProject": "Umushinga mbere",
+    "sendMessage": "Ongera ubutumwa",
+    "sending": "Kohereza…",
+    "retry": "Ongera ugerageze",
+    "sendByEmail": "Kohereza kuri imeyili",
+    "whatsappUs": "Ongeramo ubutumwa kuri WhatsApp",
+    "readPost": "Soma inyandiko",
+    "viewAllPosts": "Soma inyandiko zose",
+    "openProfile": "Fungura profile ya GitHub"
+  },
+  "status": {
+    "live": "Kuri murongo",
+    "prototype": "Icyitegererezo"
+  },
+  "footer": {
+    "tagline": "Umushakashatsi wa Full-Stack akora ibicuruzwa by'ikoranabuhanga bifite ubuhanga.",
+    "rights": "Uburenganzira bose bwari bwahariwe.",
+    "sections": "Ibice",
+    "connect": "Unganire na none",
+    "contact": "Kuvugana"
+  },
+  "a11y": {
+    "newTab": "(kuri kirenza)"
+  },
+  "meta": {
+    "tagline": "Umushakashatsi wa Full-Stack akora inganda z'ikoranabuhanga.",
+    "titleSuffix": "Umushakashatsi wa Full-Stack"
+  },
+  "cv": {
+    "title": "CV",
+    "description": "Inyandiko y'igice kimwe ku mibereho yange, ubushobozi n'imishinga.",
+    "download": "Kuraho CV",
+    "comingSoon": "CV bizaha vuba"
+  },
+  "notFound": {
+    "title": "Urugo ntirubaho",
+    "lead": "Mbi — uru rubanza ntirubaho cyangwa rwahindutse.",
+    "home": "Garuka ku ntangiriro"
+  }
+}
