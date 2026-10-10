@@ -23,6 +23,8 @@
     "contactMe": "Ongeramo ubutumwa",
     "downloadCv": "Kuraho CV",
     "cvComingSoon": "CV bizaha vuba",
+    "callMe": "Nitire",
+    "letsTalk": "Tuganire",
     "caseStudy": "Inyigo y'umushinga",
     "liveSite": "Site kuri murongo",
     "backToHome": "Garuka ku ntangiriro",
@@ -51,6 +53,9 @@
   },
   "a11y": {
     "newTab": "(kuri kirenza)"
+  },
+  "loading": {
+    "screenLabel": "Kubika portfolio"
   },
   "meta": {
     "tagline": "Umushakashatsi wa Full-Stack akora inganda z'ikoranabuhanga.",

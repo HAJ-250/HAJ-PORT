@@ -18,6 +18,8 @@
   --color-accent: var(--accent);
   --color-accent-2: var(--accent-2);
   --color-on-accent: var(--on-accent);
+  --color-violet: var(--violet);
+  --color-violet-glow: var(--violet-glow);
 
   --font-display: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
   --font-body: 'Inter', ui-sans-serif, system-ui, sans-serif;
@@ -31,24 +33,25 @@
   --border: #e2e5eb;
   --text: #12151c;
   --muted: #4b5563;
-  --accent: #1f5fe0;
-  /* darker cyan in light mode so small highlights keep AA contrast */
-  --accent-2: #0e7490;
-  /* text on accent buttons: white passes AA on #1F5FE0 */
+  --accent: #8b5cf6;
+  --accent-2: #c4b5fd;
+  --violet: #8b5cf6;
+  --violet-glow: rgba(139, 92, 246, 0.5);
   --on-accent: #ffffff;
 }
 
 .dark {
-  --background: #0a0c10;
-  --surface: #11141a;
-  --elevated: #171b23;
-  --border: #232834;
-  --text: #e8eaf0;
-  --muted: #9aa3b2;
-  --accent: #4c8dff;
-  --accent-2: #22d3ee;
-  /* text on accent buttons: near-black passes AA on #4C8DFF */
-  --on-accent: #0a0c10;
+  --background: #08080d;
+  --surface: #11111b;
+  --elevated: #1a1a2e;
+  --border: #2d2d44;
+  --text: #f8fafc;
+  --muted: #94a3b8;
+  --accent: #8b5cf6;
+  --accent-2: #c4b5fd;
+  --violet: #8b5cf6;
+  --violet-glow: rgba(139, 92, 246, 0.6);
+  --on-accent: #08080d;
 }
 
 html {
@@ -83,13 +86,15 @@ body {
 /* Subtle grid + glow used behind the hero (decorative) */
 .hero-grid {
   background-image:
-    radial-gradient(ellipse 60% 50% at 50% 0%, color-mix(in srgb, var(--accent) 14%, transparent), transparent 70%),
-    linear-gradient(color-mix(in srgb, var(--muted) 7%, transparent) 1px, transparent 1px),
-    linear-gradient(90deg, color-mix(in srgb, var(--muted) 7%, transparent) 1px, transparent 1px);
+    radial-gradient(ellipse 60% 50% at 50% 0%, color-mix(in srgb, var(--violet) 12%, transparent), transparent 70%),
+    radial-gradient(ellipse 40% 30% at 100% 100%, color-mix(in srgb, var(--violet) 8%, transparent), transparent 60%),
+    linear-gradient(color-mix(in srgb, var(--muted) 5%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--muted) 5%, transparent) 1px, transparent 1px);
   background-size:
     100% 100%,
-    44px 44px,
-    44px 44px;
+    100% 100%,
+    60px 60px,
+    60px 60px;
 }
 
 /* Thin corner accent used on cards */
@@ -133,6 +138,67 @@ body.cursor-ring-hover .cursor-ring {
   height: 48px;
   margin: -24px 0 0 -24px;
   border-color: var(--accent-2);
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px) translateX(0px); }
+  33% { transform: translateY(-8px) translateX(4px); }
+  66% { transform: translateY(4px) translateX(-3px); }
+}
+
+@keyframes bounce-subtle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(4px); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 0.8; }
+}
+
+@keyframes drift-up {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+.animate-float-slow {
+  animation: float-slow 6s ease-in-out infinite;
+}
+.animate-bounce-subtle {
+  animation: bounce-subtle 2s ease-in-out infinite;
+}
+.animate-pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+.animate-drift-up {
+  animation: drift-up 8s ease-in-out infinite;
+}
+.animate-shimmer {
+  animation: shimmer 2s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-float,
+  .animate-float-slow,
+  .animate-bounce-subtle,
+  .animate-pulse-glow,
+  .animate-drift-up {
+    animation: none !important;
+  }
 }
 
 /* Blog post body */
@@ -209,4 +275,20 @@ body.cursor-ring-hover .cursor-ring {
   border: 0;
   border-top: 1px solid var(--border);
   margin: 2rem 0;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--surface);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--muted);
 }

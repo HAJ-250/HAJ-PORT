@@ -7,6 +7,12 @@ export const site = {
   location: 'Rusizi, Rwanda',
   email: 'hirwaaime41@gmail.com',
   emailUrl: 'mailto:hirwaaime41@gmail.com',
+  phone: {
+    display: '0795 477 584',
+    international: '+250 795 477 584',
+    telLocal: 'tel:0795477584',
+    telInternational: 'tel:+250795477584',
+  },
   whatsapp: {
     display: '+250 795 477 584',
     url: 'https://wa.me/250795477584',

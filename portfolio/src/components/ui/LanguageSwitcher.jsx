@@ -17,7 +17,7 @@ export function LanguageSwitcher() {
             type="button"
             onClick={() => i18n.changeLanguage(code)}
             aria-pressed={active}
-            aria-label={`${t('language.label')}: ${LONG_NAMES[code]}`}
+            aria-label={`${LONG_NAMES[code]} (${short})`}
             className={`min-h-[44px] min-w-[44px] rounded-full px-2 text-xs font-semibold transition-colors duration-150 ${
               active
                 ? 'bg-accent text-on-accent'

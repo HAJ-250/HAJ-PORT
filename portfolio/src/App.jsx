@@ -1,4 +1,4 @@
-import { Suspense, useEffect } from 'react';
+import { Suspense, useEffect, useState } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import { Navbar } from '@/components/layout/Navbar.jsx';
 import { Footer } from '@/components/layout/Footer.jsx';
@@ -9,6 +9,7 @@ import { ProjectPage } from '@/pages/ProjectPage.jsx';
 import { BlogIndex } from '@/pages/BlogIndex.jsx';
 import { BlogPost } from '@/pages/BlogPost.jsx';
 import { NotFound } from '@/pages/NotFound.jsx';
+import { LoadingScreen } from '@/components/ui/LoadingScreen.jsx';
 
 function ScrollManager() {
   const { pathname, hash } = useLocation();
@@ -28,6 +29,12 @@ function ScrollManager() {
 }
 
 export default function App() {
+  const [loadingComplete, setLoadingComplete] = useState(false);
+
+  if (!loadingComplete) {
+    return <LoadingScreen onComplete={() => setLoadingComplete(true)} />;
+  }
+
   return (
     <>
       <SkipLink />

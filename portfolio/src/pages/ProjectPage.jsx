@@ -86,7 +86,7 @@ export function ProjectPage() {
                 {project.liveUrl ? (
                   <Button
                     href={project.liveUrl}
-                    aria-label={`${t('buttons.liveSite')} (${t('a11y.newTab')})`}
+                    aria-label={`${t('buttons.liveSite')} ${t('a11y.newTab')}`}
                   >
                     <span>{t('buttons.liveSite')}</span>
                     <ExternalLink size={14} aria-hidden="true" />
@@ -96,7 +96,7 @@ export function ProjectPage() {
                   <Button
                     href={project.repoUrl}
                     variant="secondary"
-                    aria-label={`GitHub (${t('a11y.newTab')})`}
+                    aria-label={`GitHub ${t('a11y.newTab')}`}
                   >
                     <Github size={15} aria-hidden="true" />
                     <span>GitHub</span>

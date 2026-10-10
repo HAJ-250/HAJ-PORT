@@ -23,6 +23,8 @@
     "contactMe": "Me contacter",
     "downloadCv": "Télécharger le CV",
     "cvComingSoon": "CV bientôt disponible",
+    "callMe": "M'appeler",
+    "letsTalk": "Discutons",
     "caseStudy": "Étude de cas",
     "liveSite": "Site en ligne",
     "backToHome": "Retour à l'accueil",
@@ -51,6 +53,9 @@
   },
   "a11y": {
     "newTab": "(s'ouvre dans un nouvel onglet)"
+  },
+  "loading": {
+    "screenLabel": "Chargement du portfolio"
   },
   "meta": {
     "tagline": "Développeur full-stack créant des produits logiciels créatifs.",

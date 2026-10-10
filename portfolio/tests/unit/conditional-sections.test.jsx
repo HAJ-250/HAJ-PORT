@@ -27,8 +27,11 @@ describe('conditional sections', () => {
   it('disables the CV button when the CV is not available', () => {
     renderWithI18n(<ContactSection />);
     expect(site.cv.available).toBe(false);
-    const cvState = screen.getByText(/cv coming soon/i);
-    expect(cvState).toHaveAttribute('aria-disabled', 'true');
+    // The Button component renders a span with aria-disabled when disabled
+    const cvText = screen.getByText(/cv coming soon/i);
+    // The text is inside a span with aria-disabled
+    const cvButton = cvText.closest('[aria-disabled]');
+    expect(cvButton).toHaveAttribute('aria-disabled', 'true');
   });
 
   it('renders the GitHub section when a username is verified', () => {

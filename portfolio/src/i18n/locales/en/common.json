@@ -23,6 +23,8 @@
     "contactMe": "Contact me",
     "downloadCv": "Download CV",
     "cvComingSoon": "CV coming soon",
+    "callMe": "Call me",
+    "letsTalk": "Let's talk",
     "caseStudy": "Case study",
     "liveSite": "Live site",
     "backToHome": "Back to home",
@@ -51,6 +53,9 @@
   },
   "a11y": {
     "newTab": "(opens in a new tab)"
+  },
+  "loading": {
+    "screenLabel": "Loading portfolio"
   },
   "meta": {
     "tagline": "Full-Stack Developer building creative software products.",

@@ -19,7 +19,7 @@ describe('LanguageSwitcher', () => {
     const user = userEvent.setup();
     renderWithI18n(<LanguageSwitcher />);
 
-    await user.click(screen.getByRole('button', { name: /language: français/i }));
+    await user.click(screen.getByRole('button', { name: 'Français (FR)' }));
 
     expect(i18n.language).toBe('fr');
     expect(document.documentElement.lang).toBe('fr');
@@ -30,7 +30,7 @@ describe('LanguageSwitcher', () => {
     const user = userEvent.setup();
     renderWithI18n(<LanguageSwitcher />);
 
-    await user.click(screen.getByRole('button', { name: /language: kinyarwanda/i }));
+    await user.click(screen.getByRole('button', { name: 'Kinyarwanda (RW)' }));
 
     expect(i18n.language).toBe('rw');
     expect(document.documentElement.lang).toBe('rw');
@@ -39,9 +39,9 @@ describe('LanguageSwitcher', () => {
   it('marks the active language', async () => {
     const user = userEvent.setup();
     renderWithI18n(<LanguageSwitcher />);
-    await user.click(screen.getByRole('button', { name: /language: français/i }));
+    await user.click(screen.getByRole('button', { name: 'Français (FR)' }));
 
-    const frenchButton = screen.getByRole('button', { name: /langue: français/i });
+    const frenchButton = screen.getByRole('button', { name: 'Français (FR)' });
     expect(frenchButton).toHaveAttribute('aria-pressed', 'true');
   });
 });
