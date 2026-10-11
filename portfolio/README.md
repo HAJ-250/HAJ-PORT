@@ -58,8 +58,8 @@ Copy `.env.example` to `.env` (local) or set the variables in Vercel:
 | Variable          | Required for                | Notes                                            |
 | ----------------- | --------------------------- | ------------------------------------------------ |
 | `VITE_SITE_URL`   | canonical URLs, sitemap, OG | e.g. `https://your-name.vercel.app`              |
-| `RESEND_API_KEY`  | contact form emails         | without it the API returns `503 not_configured`  |
-| `CONTACT_TO_EMAIL`| contact form recipient      | defaults to the site email if unset              |
+| `RESEND_API_KEY`  | contact form emails         | *optional* — without it the form auto-falls-back to a pre-addressed mailto: |
+| `CONTACT_FROM_EMAIL` | sender address for Resend | *optional* — must be a verified Resend sender |
 
 > **Privacy note:** the portfolio only ever shows "Rusizi, Rwanda" as the public
 > location. No date of birth, birthplace, cell, or sector is included anywhere.

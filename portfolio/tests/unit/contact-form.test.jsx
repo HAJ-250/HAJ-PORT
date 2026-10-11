@@ -4,6 +4,7 @@ import userEvent from '@testing-library/user-event';
 import { I18nextProvider } from 'react-i18next';
 import { i18n } from '@/i18n/index.js';
 import { ContactSection } from '@/components/sections/ContactSection.jsx';
+import { buildMailtoUrl } from '@/lib/validators.js';
 
 function renderWithI18n(ui) {
   return render(<I18nextProvider i18n={i18n}>{ui}</I18nextProvider>);
@@ -31,6 +32,14 @@ function fillForm(values) {
   fireEvent.change(screen.getByLabelText(/^message$/i), {
     target: { value: values.message },
   });
+}
+
+function expectMailtoShown() {
+  expect(screen.getByText(/your email app should be open/i)).toBeInTheDocument();
+  // Check email in the message text (not the link) to avoid duplicate match
+  expect(screen.getByText(/a pre-addressed message to hirwaaime41@gmail.com was prepared/i)).toBeInTheDocument();
+  const again = screen.getByRole('link', { name: /open email app again/i });
+  expect(again).toHaveAttribute('href', expect.stringContaining('mailto:hirwaaime41@gmail.com'));
 }
 
 describe('ContactSection', () => {
@@ -94,7 +103,7 @@ describe('ContactSection', () => {
     expect(body.company).toBe('');
   });
 
-  it('shows the error state and graceful fallback when email is not configured', async () => {
+  it('falls back to a pre-addressed email when the API is not configured', async () => {
     const fetchMock = vi.fn().mockResolvedValue({
       ok: false,
       status: 503,
@@ -108,21 +117,10 @@ describe('ContactSection', () => {
     fillForm(validForm);
     await user.click(screen.getByRole('button', { name: /send message/i }));
 
-    expect(
-      await screen.findByText(/isn't available on this deployment/i),
-    ).toBeInTheDocument();
-    expect(
-      screen.getByRole('link', { name: /send by email/i }),
-    ).toHaveAttribute('href', 'mailto:hirwaaime41@gmail.com');
-    const whatsappLinks = screen.getAllByRole('link', { name: /whatsapp/i });
-    expect(
-      whatsappLinks.some(
-        (link) => link.getAttribute('href') === 'https://wa.me/250795477584',
-      ),
-    ).toBe(true);
+    expectMailtoShown();
   });
 
-  it('announces network failures', async () => {
+  it('falls back to a pre-addressed email when the network fails', async () => {
     const fetchMock = vi.fn().mockRejectedValue(new Error('offline'));
     vi.stubGlobal('fetch', fetchMock);
 
@@ -132,7 +130,25 @@ describe('ContactSection', () => {
     fillForm(validForm);
     await user.click(screen.getByRole('button', { name: /send message/i }));
 
-    expect(await screen.findByText(/something went wrong/i)).toBeInTheDocument();
+    expectMailtoShown();
+  });
+
+  it('silently ignores bots via the honeypot field', async () => {
+    const fetchMock = vi.fn();
+    vi.stubGlobal('fetch', fetchMock);
+
+    const user = userEvent.setup();
+    const { container } = renderWithI18n(<ContactSection />);
+
+    fillForm(validForm);
+    const honeypot = container.querySelector('input[name="company"]');
+    fireEvent.change(honeypot, { target: { value: 'filled by bot' } });
+    await user.click(screen.getByRole('button', { name: /send message/i }));
+
+    await new Promise((r) => setTimeout(r, 50));
+    expect(fetchMock).not.toHaveBeenCalled();
+    expect(screen.queryByText(/message sent/i)).not.toBeInTheDocument();
+    expect(screen.queryByText(/your email app should be open/i)).not.toBeInTheDocument();
   });
 
   it('disables the submit button while sending', async () => {
@@ -151,7 +167,6 @@ describe('ContactSection', () => {
     fillForm(validForm);
     await user.click(screen.getByRole('button', { name: /send message/i }));
 
-    // The disabled Button renders as a span with aria-disabled
     const sendingLabel = screen.getByText(/sending/i);
     const disabledWrapper = sendingLabel.closest('[aria-disabled]');
     expect(disabledWrapper).not.toBeNull();
@@ -159,5 +174,54 @@ describe('ContactSection', () => {
 
     resolveFetch({ ok: true, json: async () => ({ ok: true }) });
     expect(await screen.findByText(/message sent/i)).toBeInTheDocument();
+  });
+});
+
+describe('buildMailtoUrl', () => {
+  it('builds a pre-addressed mailto link with subject and body', () => {
+    const url = buildMailtoUrl({
+      to: 'owner@example.com',
+      name: 'Jane Doe',
+      email: 'jane@example.com',
+      subject: 'Project inquiry',
+      message: 'Hello,\nI would like to work with you.',
+    });
+
+    expect(url).toBe(
+      'mailto:owner@example.com'
+        + `?subject=${encodeURIComponent('[Portfolio] Project inquiry — Jane Doe')}`
+        + `&body=${encodeURIComponent('Name: Jane Doe\nEmail: jane@example.com\n\nHello,\nI would like to work with you.')}`,
+    );
+    expect(url).toContain('mailto:owner@example.com?subject=');
+    expect(url).toContain(encodeURIComponent('Jane Doe'));
+    expect(url).toContain(encodeURIComponent('jane@example.com'));
+  });
+
+  it('works without an optional subject', () => {
+    const url = buildMailtoUrl({
+      to: 'owner@example.com',
+      name: 'Jane Doe',
+      email: 'jane@example.com',
+      subject: '',
+      message: 'Hi there',
+    });
+
+    expect(url).toContain(encodeURIComponent('[Portfolio] Jane Doe'));
+    expect(url).not.toContain('—');
+  });
+
+  it('percent-encodes newlines and special characters', () => {
+    const url = buildMailtoUrl({
+      to: 'owner@example.com',
+      name: 'A B',
+      email: 'a@b.co',
+      subject: '',
+      message: 'line1\nline2 <>&"\'',
+    });
+
+    expect(url).toContain('%0A');
+    expect(url).not.toContain('<');
+    expect(url).not.toContain('>');
+    expect(url).not.toContain(' ');
   });
 });

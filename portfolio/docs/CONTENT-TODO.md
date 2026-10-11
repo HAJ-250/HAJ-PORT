@@ -34,9 +34,11 @@ invented facts. Items are ordered roughly by impact on the site's completeness.
    `https://your-project.vercel.app`). Affects canonical links, sitemap,
    OG tags, and robots.txt. Regenerate the sitemap after changing it
    (`npm run sitemap`).
-9. **`RESEND_API_KEY` + `CONTACT_TO_EMAIL`** — required for the contact form
-   to send email. Without them the API returns `503 not_configured` and the
-   form shows the mailto/WhatsApp fallback.
+9. **`RESEND_API_KEY` + `CONTACT_FROM_EMAIL`** — *optional*. Without them
+   the contact form automatically falls back to a pre-addressed
+   `mailto:` in the visitor's own mail app, so comments still reach
+   hirwaaime41@gmail.com. Add the key on Vercel for fully
+   automatic delivery (no visitor-side "send" step).
 10. **GitHub username** — verified as `HAJ-250`. If the account is ever
     renamed, update `github.username` in `src/data/site.js` and re-run
     `npm run verify:github`.

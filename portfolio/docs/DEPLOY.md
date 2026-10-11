@@ -27,9 +27,12 @@
 ## What the contact endpoint needs
 
 `api/contact.js` is a Vercel serverless function. It sends email through
-Resend's REST API. If `RESEND_API_KEY` is unset it returns
-`503 not_configured` and the UI shows a mailto + WhatsApp fallback — the
-form never silently fails.
+Resend's REST API. If `RESEND_API_KEY` / `CONTACT_FROM_EMAIL` are
+unset it returns `503 not_configured` — and the form **automatically
+falls back to a pre-addressed `mailto:` email** (visitor's own mail
+app, already addressed to `hirwaaime41@gmail.com` with their name,
+email and message). Visitor comments reach you either way; the form
+never silently fails.
 
 ## Custom domain
 
@@ -39,8 +42,9 @@ Add the domain in Vercel (Project → Settings → Domains), then update
 ## Verifying a deploy
 
 - `https://<your-domain>/robots.txt` and `/sitemap.xml` resolve.
-- Contact form: with the API key set, a test message arrives by email;
-  without it, the fallback block appears.
+- Contact form: with the API key set, a test message arrives by
+  email automatically; without it, submitting opens the visitor's
+  mail app with a pre-addressed message to you.
 - Run `npm run verify:github` locally to re-confirm the GitHub username and
   hand-picked repos resolve.
 

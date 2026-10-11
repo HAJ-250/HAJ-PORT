@@ -15,8 +15,9 @@
   "successText": "Merci de m'avoir contacté — je répondrai dès que possible.",
   "errorTitle": "Une erreur est survenue",
   "errorText": "Votre message n'a pas pu être envoyé. Réessayez ou contactez-moi directement via les liens ci-dessous.",
-  "fallbackTitle": "Le formulaire automatique n'est pas encore disponible sur ce déploiement",
-  "fallbackText": "L'envoi d'e-mails n'est pas configuré ici. Vous pouvez toujours me contacter directement :",
+  "mailtoTitle": "Votre application e-mail devrait s'ouvrir",
+  "mailtoText": "Un message pré-adressé à {{email}} a été préparé avec votre nom, votre e-mail et votre message. Appuyez simplement sur envoyer pour le livrer.",
+  "openAgain": "Rouvrir l'application e-mail",
   "directLabel": "Me contacter directement",
   "errors": {
     "name": "Veuillez saisir votre nom (2 à 100 caractères).",
@@ -24,7 +25,6 @@
     "subject": "Veuillez garder l'objet sous 200 caractères.",
     "message": "Veuillez rédiger un message (10 à 5000 caractères).",
     "network": "Une erreur réseau s'est produite. Vérifiez votre connexion puis réessayez.",
-    "not_configured": "L'envoi d'e-mails n'est pas encore configuré sur ce site — utilisez les liens directs ci-dessous.",
     "rate_limited": "Trop de messages depuis cette connexion. Veuillez patienter quelques minutes puis réessayer.",
     "unexpected": "Une erreur inattendue s'est produite. Réessayez ou contactez-moi directement."
   }

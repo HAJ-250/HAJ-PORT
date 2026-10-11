@@ -15,7 +15,7 @@ import {
 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { site } from '@/data/site.js';
-import { validateContact } from '@/lib/validators.js';
+import { validateContact, buildMailtoUrl } from '@/lib/validators.js';
 import { Button } from '@/components/ui/Button.jsx';
 import { Card } from '@/components/ui/Card.jsx';
 import { Reveal } from '@/components/ui/Reveal.jsx';
@@ -46,7 +46,14 @@ export function ContactSection() {
   const [values, setValues] = useState(INITIAL_VALUES);
   const [errors, setErrors] = useState({});
   const [status, setStatus] = useState('idle');
-  const [errorCode, setErrorCode] = useState(null);
+  const [viaMailto, setViaMailto] = useState(false);
+
+  // Open a pre-addressed email in the visitor's own mail app.
+  // Secret-free delivery: no API key needed — the visitor presses
+  // send and the message reaches the site owner's inbox.
+  const openMailto = () => {
+    window.location.assign(buildMailtoUrl({ to: site.email, ...values }));
+  };
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -62,6 +69,11 @@ export function ContactSection() {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+
+    // Honeypot: bots fill hidden fields. Silently ignore them.
+    if (values.company && String(values.company).trim() !== '') {
+      return;
+    }
 
     const validationErrors = validateContact(values);
     if (Object.keys(validationErrors).length > 0) {
@@ -81,21 +93,30 @@ export function ContactSection() {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(values),
       });
-      const data = await res.json().catch(() => ({}));
       if (res.ok) {
+        setViaMailto(false);
         setStatus('success');
         setValues(INITIAL_VALUES);
-      } else {
-        setStatus('error');
-        setErrorCode(data.error || 'unexpected');
+        return;
       }
-    } catch {
+      const data = await res.json().catch(() => ({}));
+      // Email delivery isn't configured on this deployment:
+      // hand the visitor a pre-addressed email instead of failing.
+      if (data.error === 'not_configured') {
+        setViaMailto(true);
+        setStatus('success');
+        openMailto();
+        return;
+      }
       setStatus('error');
-      setErrorCode('network');
+    } catch {
+      // The API endpoint is unreachable (e.g. static hosting).
+      // The pre-addressed email still works — never fail silently.
+      setViaMailto(true);
+      setStatus('success');
+      openMailto();
     }
   };
-
-  const showFallback = status === 'error' && errorCode === 'not_configured';
 
   const socials = [
     { href: site.phone.telLocal, label: site.phone.display, icon: Phone, isTel: true },
@@ -190,8 +211,27 @@ export function ContactSection() {
                       <div className="absolute -inset-1 rounded-full border border-violet-500/30 animate-pulse-glow" aria-hidden="true" />
                     </div>
                     <div>
-                      <p className="font-semibold text-text">{tc('successTitle')}</p>
-                      <p className="mt-1 text-sm text-muted">{tc('successText')}</p>
+                      <p className="font-semibold text-text">
+                        {viaMailto ? tc('mailtoTitle') : tc('successTitle')}
+                      </p>
+                      <p className="mt-1 text-sm text-muted">
+                        {viaMailto
+                          ? tc('mailtoText', { email: site.email })
+                          : tc('successText')}
+                      </p>
+                      {viaMailto && (
+                        <Button
+                          href={buildMailtoUrl({ to: site.email, ...values })}
+                          variant="secondary"
+                          size="sm"
+                          className="mt-4 group relative overflow-hidden"
+                        >
+                          <span className="relative z-10 flex items-center gap-2">
+                            <Mail size={14} aria-hidden="true" />
+                            <span>{tc('openAgain')}</span>
+                          </span>
+                        </Button>
+                      )}
                     </div>
                   </div>
                 ) : (
@@ -237,7 +277,7 @@ export function ContactSection() {
                       className="sr-only"
                     />
 
-                    {status === 'error' && !showFallback && (
+                    {status === 'error' && (
                       <div
                         role="alert"
                         aria-live="polite"
@@ -273,38 +313,6 @@ export function ContactSection() {
                       </Button>
                     </div>
                   </form>
-                )}
-
-                {showFallback && (
-                  <div
-                    role="alert"
-                    aria-live="polite"
-                    className="mt-6 rounded-xl border border-border bg-surface/50 p-6 animate-in fade-in slide-in-from-y-4 duration-300"
-                  >
-                    <div className="flex items-center gap-3 mb-4">
-                      <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-violet-500/10">
-                        <Mail size={20} className="text-violet-500" aria-hidden="true" />
-                      </div>
-                      <div>
-                        <p className="font-semibold text-text">{tc('fallbackTitle')}</p>
-                        <p className="text-sm text-muted">{tc('fallbackText')}</p>
-                      </div>
-                    </div>
-                    <div className="flex flex-wrap gap-3">
-                      <Button href={site.emailUrl} variant="secondary" size="lg" className="flex items-center gap-2">
-                        <Mail size={16} aria-hidden="true" />
-                        <span>{t('buttons.sendByEmail')}</span>
-                      </Button>
-                      <Button href={site.whatsapp.url} variant="secondary" size="lg" className="flex items-center gap-2">
-                        <MessageSquare size={16} aria-hidden="true" />
-                        <span>{t('buttons.whatsappUs')}</span>
-                      </Button>
-                      <Button href={site.phone.telLocal} variant="secondary" size="lg" className="flex items-center gap-2">
-                        <Phone size={16} aria-hidden="true" />
-                        <span>{t('buttons.callMe')}</span>
-                      </Button>
-                    </div>
-                  </div>
                 )}
               </div>
             </Card>

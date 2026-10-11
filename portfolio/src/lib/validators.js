@@ -52,3 +52,17 @@ export function escapeHtml(value) {
     .replace(/"/g, '&quot;')
     .replace(/'/g, '&#39;');
 }
+
+/**
+ * Build a pre-addressed `mailto:` link. This is the secret-free
+ * delivery path: when no transactional email service is configured,
+ * the visitor's own mail app composes the message to the site owner,
+ * so the owner still receives the comment without any API key.
+ * encodeURIComponent (not URLSearchParams) is used so spaces become
+ * %20 — some mail clients do not decode '+' inside query strings.
+ */
+export function buildMailtoUrl({ to, name, email, subject, message }) {
+  const subjectLine = `[Portfolio] ${subject ? `${subject} — ` : ''}${name}`;
+  const body = `Name: ${name}\nEmail: ${email}\n\n${message}`;
+  return `mailto:${to}?subject=${encodeURIComponent(subjectLine)}&body=${encodeURIComponent(body)}`;
+}
