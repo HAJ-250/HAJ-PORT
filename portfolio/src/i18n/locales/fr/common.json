@@ -55,7 +55,9 @@
     "newTab": "(s'ouvre dans un nouvel onglet)"
   },
   "loading": {
-    "screenLabel": "Chargement du portfolio"
+    "screenLabel": "Chargement du portfolio",
+    "statusLoading": "chargement…",
+    "statusReady": "prêt"
   },
   "meta": {
     "tagline": "Développeur full-stack créant des produits logiciels créatifs.",

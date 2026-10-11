@@ -1,4 +1,4 @@
-import { Facebook, Github, Instagram, Mail, ArrowUp, Phone } from 'lucide-react';
+import { Facebook, Github, Instagram, Mail, ArrowUp, Phone, MessageCircle } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { site } from '@/data/site.js';
 import { Monogram } from '@/components/ui/Monogram.jsx';
@@ -20,7 +20,7 @@ export function Footer() {
   const socials = [
     { href: site.phone.telLocal, label: site.phone.display, icon: Phone, isTel: true },
     { href: site.emailUrl, label: 'Email', icon: Mail },
-    { href: site.whatsapp.url, label: 'WhatsApp', icon: null },
+    { href: site.whatsapp.url, label: 'WhatsApp', icon: MessageCircle },
     { href: site.facebook, label: 'Facebook', icon: Facebook },
     { href: site.instagram, label: 'Instagram', icon: Instagram },
   ];
@@ -108,7 +108,7 @@ export function Footer() {
                     aria-label={`${label}${href.startsWith('http') ? ` ${t('a11y.newTab')}` : ''}`}
                   >
                     {Icon ? <Icon size={16} aria-hidden="true" /> : (
-                      <span className="font-mono text-xs text-violet-500">WA</span>
+                      <MessageCircle size={16} aria-hidden="true" className="text-violet-500" />
                     )}
                     {label}
                   </a>

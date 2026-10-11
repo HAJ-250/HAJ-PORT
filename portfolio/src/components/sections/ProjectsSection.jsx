@@ -97,7 +97,7 @@ export function ProjectsSection() {
                         <Button
                           href={project.repoUrl}
                           variant="ghost"
-                          aria-label={`GitHub ${t('a11y.newTab')}`}
+                          aria-label={`Code ${t('a11y.newTab')}`}
                           className="group relative"
                         >
                           <span className="relative z-10 flex items-center gap-1.5">

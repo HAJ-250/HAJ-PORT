@@ -51,7 +51,7 @@ export function Navbar() {
           <a
             href="#top"
             className="relative flex min-h-[48px] items-center gap-3 pr-2 group"
-            aria-label={`${site.nickname} — ${site.name} — ${site.title}`}
+            aria-label={`${site.nickname} ${site.name} — ${site.title}`}
           >
             <motion.div
               initial={false}
@@ -61,6 +61,7 @@ export function Navbar() {
             >
               <HAJWordmark size="nav" animate={false} />
             </motion.div>
+            {' '}
             <span className="hidden font-display text-sm font-semibold tracking-tight sm:block text-text">
               {site.name}
             </span>

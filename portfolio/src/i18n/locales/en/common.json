@@ -55,7 +55,9 @@
     "newTab": "(opens in a new tab)"
   },
   "loading": {
-    "screenLabel": "Loading portfolio"
+    "screenLabel": "Loading portfolio",
+    "statusLoading": "loading…",
+    "statusReady": "ready"
   },
   "meta": {
     "tagline": "Full-Stack Developer building creative software products.",

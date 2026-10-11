@@ -55,7 +55,9 @@
     "newTab": "(kuri kirenza)"
   },
   "loading": {
-    "screenLabel": "Kubika portfolio"
+    "screenLabel": "Kubika portfolio",
+    "statusLoading": "kubika…",
+    "statusReady": "kiteganyijwe"
   },
   "meta": {
     "tagline": "Umushakashatsi wa Full-Stack akora inganda z'ikoranabuhanga.",

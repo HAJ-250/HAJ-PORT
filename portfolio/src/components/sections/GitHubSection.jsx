@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next';
 import { site } from '@/data/site.js';
 import { useGithubRepos } from '@/hooks/useGithubRepos.js';
+import { ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/Button.jsx';
 import { Card } from '@/components/ui/Card.jsx';
 import { Reveal } from '@/components/ui/Reveal.jsx';
@@ -121,7 +122,7 @@ export function GitHubSection() {
           >
             <span className="relative z-10 flex items-center gap-1.5">
               {t('buttons.openProfile')}
-              <span className="transition-transform duration-200 group-hover:translate-x-1" aria-hidden="true">→</span>
+              <ArrowRight size={14} aria-hidden="true" className="transition-transform duration-200 group-hover:translate-x-1" />
             </span>
           </Button>
         </div>

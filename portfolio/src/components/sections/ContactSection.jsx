@@ -3,13 +3,15 @@ import { motion } from 'motion/react';
 import {
   AlertCircle,
   CheckCircle2,
+  ChevronRight,
   Facebook,
   Github,
   Instagram,
   Mail,
+  MessageCircle,
+  Phone,
   Send,
   MessageSquare,
-  Phone,
 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { site } from '@/data/site.js';
@@ -340,9 +342,7 @@ export function ContactSection() {
                         {Icon ? (
                           <Icon size={18} className="text-muted group-hover:text-violet-400 transition-colors duration-200" aria-hidden="true" />
                         ) : (
-                          <span className="flex h-8 w-8 items-center justify-center rounded-xl bg-violet-500/10 text-violet-500 font-mono text-xs">
-                            WA
-                          </span>
+                          <MessageCircle size={18} className="text-violet-500" aria-hidden="true" />
                         )}
                         <span className="font-medium">{visible}</span>
                         {isPhone && (
@@ -350,10 +350,10 @@ export function ContactSection() {
                             initial={false}
                             animate={{ scale: [1, 1.1, 1] }}
                             transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
-                            className="ml-auto flex h-5 w-5 items-center justify-center rounded-full bg-violet-500/20 text-violet-500 text-xs font-mono"
+                            className="ml-auto flex h-5 w-5 items-center justify-center rounded-full bg-violet-500/20 text-violet-500"
                             aria-hidden="true"
                           >
-                            ▸
+                            <ChevronRight size={14} />
                           </motion.span>
                         )}
                         <span className="absolute inset-0 bg-gradient-to-r from-violet-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" aria-hidden="true" />
